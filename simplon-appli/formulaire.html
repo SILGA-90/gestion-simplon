@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles/formulaire.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="div_header">
+        <a href="index.php"><img class="img_header1" src="fonts/left_arrow.png"></a>
+        <img class="img_header2" src="fonts/logo.png" alt="">
+    </div>
+    <h2 class="centre">AJOUT D'APPRENANT(S)</h2>
+    <div class="box">
+        <form>
+            <div class="alignement">
+                <label class="label" for="nom"> Nom:</label>
+                <input class="input" type="text" name="nom" placeholder="Veuillez entrer le nom" required>
+            </div>
+            <div class="alignement">
+                <label class="label" for="prenom"> Prénom:</label>
+                <input class="input" type="text" name="prenom" placeholder="Veuillez entrer le prénom" required>
+            </div>
+            <div class="alignement"> 
+                <label class="label" for="naissance">Entrez la date de naissance:</label>
+                <input class="input" type="date" name="naissance" placeholder="Date de naissance" required>
+            </div>
+            <div class="alignement"> 
+                <label class="label" for="sexe">Veuillez entrez le Sexe:</label>
+                <input class="input" type="text" list="genders" name="sexe" placeholder="Sexe" required>
+                <datalist id="genders">
+                    <option value="Masculin"></option>
+                    <option value="Feminin"></option>
+                    <option value="homme"></option>
+                    <option value="femme"></option>
+                </datalist>
+            </div>
+            <div class="alignement">
+                <label class="label" for="ville">Entrez la ville d'origine:</label>
+                <input class="input" type="text" name="ville" placeholder="Ville d'origine" required>
+            </div>
+            <div class="alignement">
+                <label class="label" for="formation">Entrez la formation de base:</label>
+                <input class="input" type="text" name="formation" placeholder="Formation de base" required>
+            </div>
+            <div class="alignement">
+                <label class="label" for="email">Entrez l'email:</label>
+                <input class="input" type="email" name="email" placeholder="Veuillez entrer l'email" required>
+            </div>   
+            <button type="submit" class="bouton"><span>Ajouter l'apprenant</span></button>
+        </form>
+   
+    </div>
+    <script src="sendData.js" type="text/javascript"></script>
+</body>
+</html>

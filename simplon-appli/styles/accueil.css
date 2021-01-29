@@ -1,0 +1,102 @@
+:root {
+    margin: 0px;
+    padding: 0px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    --primary: #ce0033 !important;
+}
+a {text-decoration: none;}
+header {
+    width: 100%;
+    height: 100px;
+    background: var(--primary);
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+#logo {
+    width: 75px;
+    height: 75px;
+    transform: translate(13px, 13px);
+}
+#logo > a > img {
+    width: 100%;
+    height: 100%;
+}
+#searchbar {
+    width: 225px;
+    height: 45px;
+}
+#searchbar > form {
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    display: flex;
+    transform: translate(-50px, 25px);
+    border: none;
+    border-radius: 30px;
+    padding-left: 25px;
+}
+#searchbar > form > input {
+    border: none;
+    outline: none;
+}
+#searchbar > form > button {
+    width: fit-content;
+    height: fit-content;
+    background: transparent;
+    margin-top: 5px;
+    border: none;
+    outline: none;
+}
+#searchbar > form > button > img {
+    width: 35px;
+    height: 35px;
+}
+main {margin-top: 150px;}
+#addBtn {
+    text-align: center;
+}
+
+#addBtn > a {
+    font-size: 17px;
+    padding: 10px 75px;
+    color: #fff;
+    background: var(--primary);
+    border-radius: 10px;
+}
+
+#list > h1 {text-align: center;}
+#table {
+    overflow-x: scroll;
+}
+#list table {
+    margin: auto;
+    border-collapse: collapse;
+}
+th {
+    padding: 0 18px;
+}
+tbody > tr {margin-top: 30px;}
+tbody > tr > td {
+    text-align: center;
+    border: none;
+    padding: 10px 5px;
+}
+tbody > tr:nth-child(odd) {background: #ddd;}
+@media (max-width: 430px) {
+    #searchbar {
+        width: 150px;
+        height: 35px;
+    }
+    #searchbar > form {transform: translate(-55px, 25px);}
+    #searchbar > form > input {
+        width: 100px;
+        height: auto;
+    }
+    #searchbar > form > button > img {
+        width: 27px;
+        height: 27px;
+    }
+}
