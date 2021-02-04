@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="simplon-appli/styles/login.css">
+    <link rel="stylesheet" href="simplon-appli/styles/index1.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>LOGGIN-SIGNUP</title>
 </head>
@@ -57,11 +57,12 @@
                     </div>
                     <div class="input-box">
                         <img src="simplon-appli/fonts/Lock_52px.png" alt="">
-                        <input type="password" name="password" placeholder="ENTER YOUR PASSWORD" required>
+                        <input type="password" name="password" placeholder="ENTER YOUR PASSWORD" id="password" required>
                     </div>    
                     <div class="input-box">
                         <img src="simplon-appli/fonts/Lock_52px.png" alt="">
-                        <input type="password" placeholder="CONFIRM PASSWORD">
+                        <input type="password" placeholder="CONFIRM PASSWORD" id="confirm_password">
+                        <span id='message'></span>
                     </div>  
                     <div class="button-box signInBtn-Box">
                         <button>SIGN UP</button>
@@ -72,7 +73,7 @@
         </div>
     </div>
 
-
+    <script src="assets/js/jquery-3.5.1.min.js"></script>
     <script type="text/javascript">
         // LOGIN SIGN UP-BOX
         var loginSignUp = document.getElementById('loginSignUp');
@@ -113,7 +114,21 @@
                 img1.style.transform = 'translateY(-50%) scale(1)';
                 img2.style.transform = 'translateY(-50%) scale(0)';
             },300)
-        })
+        });
+
+        // TO CONFIRM PASSWORD
+        $('#password, #confirm_password').on('keyup', function () {
+            if ($('#password').val() == $('#confirm_password').val()) {
+        $('#message').html('Matching').css('color', 'green');
+        } else 
+           { $('#message').html('Not Matching').css('color', '#ce0033');
+            }
+        });
+        $('form').on('submit',function(e){
+            if ($('#password').val() != $('#confirm_password').val()){
+                e.preventDefault();
+            }
+            })
 
     </script>
 </body>

@@ -24,10 +24,11 @@ if (isset($_REQUEST['username'], $_REQUEST['email'], $_REQUEST['password'])){
   // Exécuter la requête sur la base de données
     $res = mysqli_query($conn, $query);
     if($res){
-       echo "<div class='sucess'>
-             <h3>Vous êtes inscrit avec succès.</h3>
-             <p>Cliquez ici pour vous <a href='login1.php'>connecter</a></p>
+       echo "<div class='success'>
+             <h3>Congratulation for your subscription !!!.</h3>
+             <p>Click here to SIGN IN  <a href='index1.php'>SIGN IN</a></p>
        </div>";
     }
-}else{ }
+}else{ 
+}
 ?>

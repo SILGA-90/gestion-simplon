@@ -17,10 +17,7 @@ if (isset($_POST['email']))
       header("Location:simplon-appli/index.php");
   }else{
     $message = "Le nom d'utilisateur ou le mot de passe est incorrect.";
-    echo $message;
-    
-
-     
+    echo $message;   
   }
 }
 ?>
